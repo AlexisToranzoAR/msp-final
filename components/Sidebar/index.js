@@ -229,33 +229,13 @@ export default function Sidebar(props) {
             <MenuIcon />
           </IconButton>
           <Typography
-            sx={{ display: { xs: "none", sm: "block" } }}
             noWrap
             variant="h6"
           >
             {title}
           </Typography>
-          <Search>
-            <SearchIconWrapper>
-              <SearchIcon />
-            </SearchIconWrapper>
-            <StyledInputBase
-              placeholder="Search…"
-              inputProps={{ "aria-label": "search" }}
-            />
-          </Search>
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ flexGrow: 0, display: "flex", flexDirection: "row" }}>
-            <IconButton
-              size="large"
-              aria-label="show 17 new notifications"
-              color="inherit"
-              sx={{ display: { xs: "none", sm: "inline-block" }, mr: 1 }}
-            >
-              <Badge badgeContent={17} color="error">
-                <NotificationsIcon />
-              </Badge>
-            </IconButton>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Avatar
