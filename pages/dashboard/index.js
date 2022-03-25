@@ -33,11 +33,11 @@ export default function Dashboard() {
 
       <Sidebar title="Dashboard">
         <Grid container spacing={2}>
-          <Grid xs={6} item>
+          <Grid xs={12} xl={6} item>
             <Grid container spacing={2}>
               <Grid xs={12} item>
-                <Grid container>
-                  <Grid xs={2} item>
+                <Grid container spacing={2}>
+                  <Grid xs={4} md={2} item>
                     <IconWithText
                       icon={
                         <CrisisAlertTwoToneIcon
@@ -49,7 +49,7 @@ export default function Dashboard() {
                       helperText="New Breaches"
                     />
                   </Grid>
-                  <Grid xs={2} item>
+                  <Grid xs={4} md={2} item>
                     <IconWithText
                       icon={
                         <FactCheckTwoToneIcon sx={{ height: 50, width: 50 }} />
@@ -58,7 +58,7 @@ export default function Dashboard() {
                       helperText="Subscription"
                     />
                   </Grid>
-                  <Grid xs={2} item>
+                  <Grid xs={4} md={2} item>
                     <IconWithText
                       icon={
                         <LanguageTwoToneIcon sx={{ height: 50, width: 50 }} />
@@ -67,7 +67,7 @@ export default function Dashboard() {
                       helperText="Domains"
                     />
                   </Grid>
-                  <Grid xs={2} item>
+                  <Grid xs={4} md={2} item>
                     <IconWithText
                       icon={
                         <CorporateFareTwoToneIcon
@@ -78,14 +78,14 @@ export default function Dashboard() {
                       helperText="Customers"
                     />
                   </Grid>
-                  <Grid xs={2} item>
+                  <Grid xs={4} md={2} item>
                     <IconWithText
                       icon={<EmailTwoToneIcon sx={{ height: 50, width: 50 }} />}
                       text="2"
                       helperText="Emails"
                     />
                   </Grid>
-                  <Grid xs={2} item>
+                  <Grid xs={4} md={2} item>
                     <IconWithText
                       icon={
                         <AssessmentTwoToneIcon sx={{ height: 50, width: 50 }} />
@@ -127,7 +127,7 @@ export default function Dashboard() {
               </Grid>
             </Grid>
           </Grid>
-          <Grid xs={6} item>
+          <Grid xs={12} xl={6} item>
             {/* Test */}
             <div>
               <p>
