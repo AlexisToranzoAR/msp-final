@@ -11,7 +11,6 @@ import {
   Menu,
   MenuItem,
   Tooltip,
-  Badge,
   List,
   ListItem,
   ListItemIcon,
@@ -39,55 +38,14 @@ import PeopleAltTwoToneIcon from "@mui/icons-material/PeopleAltTwoTone"
 import BrandingWatermarkTwoToneIcon from "@mui/icons-material/BrandingWatermarkTwoTone"
 import ForwardToInboxTwoToneIcon from "@mui/icons-material/ForwardToInboxTwoTone"
 
-import NotificationsIcon from "@mui/icons-material/Notifications";
-import SearchIcon from "@mui/icons-material/Search";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
 
 const drawerWidth = 240;
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
-const Search = styled("div")(({ theme }) => ({
-  position: "relative",
-  borderRadius: theme.shape.borderRadius,
-  backgroundColor: alpha(theme.palette.common.white, 0.15),
-  "&:hover": {
-    backgroundColor: alpha(theme.palette.common.white, 0.25),
-  },
-  marginRight: theme.spacing(2),
-  marginLeft: 0,
-  width: "100%",
-  [theme.breakpoints.up("sm")]: {
-    marginLeft: theme.spacing(3),
-    width: "auto",
-  },
-}));
-
-const SearchIconWrapper = styled("div")(({ theme }) => ({
-  padding: theme.spacing(0, 2),
-  height: "100%",
-  position: "absolute",
-  pointerEvents: "none",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-}));
-
-const StyledInputBase = styled(InputBase)(({ theme }) => ({
-  color: "inherit",
-  "& .MuiInputBase-input": {
-    padding: theme.spacing(1, 1, 1, 0),
-    paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-    transition: theme.transitions.create("width"),
-    width: "100%",
-    [theme.breakpoints.up("md")]: {
-      width: "20ch",
-    },
-  },
-}));
-
 export default function Sidebar(props) {
-  const { window, title, children } = props;
+  const { window, title, icon, children } = props;
   const router = useRouter();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [anchorElUser, setAnchorElUser] = useState(null);
@@ -140,7 +98,7 @@ export default function Sidebar(props) {
             </ListItemIcon>
             <ListItemText primary="Customers" />
           </ListItem>
-          <ListItem onClick={() => router.push("/feature/request")} button>
+          <ListItem onClick={() => router.push("/featureRequests")} button>
             <ListItemIcon>
               <DashboardCustomizeTwoToneIcon />
             </ListItemIcon>
@@ -228,6 +186,7 @@ export default function Sidebar(props) {
           >
             <MenuIcon />
           </IconButton>
+          {icon && icon}
           <Typography
             noWrap
             variant="h6"

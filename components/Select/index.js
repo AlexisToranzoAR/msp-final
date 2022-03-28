@@ -4,7 +4,7 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import { useState } from "react";
 
-export default function MySelect({ label, fullWidth }) {
+export default function MySelect({ label, fullWidth, size }) {
   const [age, setAge] = useState("");
 
   const handleChange = (e) => {
@@ -12,7 +12,7 @@ export default function MySelect({ label, fullWidth }) {
   };
 
   return (
-    <FormControl fullWidth={fullWidth}>
+    <FormControl size={size} fullWidth={fullWidth}>
       <InputLabel id="demo-simple-select-label">{label}</InputLabel>
       <Select
         labelId="demo-simple-select-label"

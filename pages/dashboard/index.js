@@ -1,7 +1,6 @@
 import Sidebar from "components/Sidebar";
 import Head from "components/Head";
 import {
-  Box,
   Grid,
   Table,
   TableBody,
@@ -14,8 +13,6 @@ import {
   CardContent,
   Card,
 } from "@mui/material";
-import { alpha } from "@mui/material/styles";
-import CardMembershipOutlinedIcon from "@mui/icons-material/CardMembershipOutlined";
 import IconWithText from "components/IconWithText";
 
 import { red, grey } from "@mui/material/colors";
@@ -25,13 +22,14 @@ import LanguageTwoToneIcon from "@mui/icons-material/LanguageTwoTone";
 import CorporateFareTwoToneIcon from "@mui/icons-material/CorporateFareTwoTone";
 import EmailTwoToneIcon from "@mui/icons-material/EmailTwoTone";
 import AssessmentTwoToneIcon from "@mui/icons-material/AssessmentTwoTone";
+import SpeedTwoToneIcon from "@mui/icons-material/SpeedTwoTone";
 
 export default function Dashboard() {
   return (
     <>
       <Head title="Dashboard - MSP" />
 
-      <Sidebar title="Dashboard">
+      <Sidebar title="Dashboard" icon={<SpeedTwoToneIcon sx={{ mr: 1}}/>}>
         <Grid container spacing={2}>
           <Grid xs={12} xl={6} item>
             <Grid container spacing={2}>
