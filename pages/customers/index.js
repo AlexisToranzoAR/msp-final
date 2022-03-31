@@ -17,6 +17,7 @@ import IconWithText from "components/IconWithText";
 import AddBoxOutlinedIcon from "@mui/icons-material/AddBoxOutlined";
 import LanguageTwoToneIcon from "@mui/icons-material/LanguageTwoTone";
 import Link from "next/link";
+import Button from "components/Button";
 
 export default function Breaches() {
   return (
@@ -25,15 +26,7 @@ export default function Breaches() {
 
       <Sidebar title="Customers" icon={<GroupTwoToneIcon sx={{ mr: 1 }} />}>
         <Grid container spacing={2}>
-          <Grid
-            xs={12}
-            item
-            sx={{
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "center",
-            }}
-          >
+          <Grid xs={12} lg={3} item sx={{ margin: "auto" }}>
             <Link href="/customers/add">
               <a>
                 <Box sx={{ display: "flex", alignItems: "center" }}>
@@ -45,6 +38,23 @@ export default function Breaches() {
                 </Box>
               </a>
             </Link>
+          </Grid>
+          <Grid xs={12} lg={3} item sx={{ margin: "auto" }}>
+            <Button fullWidth variant="contained">
+              Download CSV Template
+            </Button>
+          </Grid>
+          <Grid xs={12} lg={3} item sx={{ margin: "auto" }}>
+            <Button fullWidth variant="contained">
+              Upload CSV
+            </Button>
+          </Grid>
+          <Grid
+            xs={12}
+            lg={3}
+            item
+            sx={{ textAlign: { xs: "center", lg: "right" } }}
+          >
             <IconWithText
               icon={<LanguageTwoToneIcon sx={{ height: 50, width: 50 }} />}
               text="1/5"

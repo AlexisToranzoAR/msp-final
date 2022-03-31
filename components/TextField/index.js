@@ -18,6 +18,7 @@ export default function MyTextField({
   type,
   value,
   variant,
+  sx,
 }) {
   return (
     <>
@@ -40,6 +41,7 @@ export default function MyTextField({
           type={type}
           value={formik?.values[id]}
           variant={variant}
+          sx={sx}
         />
       ) : (
         <TextField
@@ -59,6 +61,7 @@ export default function MyTextField({
           type={type}
           value={value}
           variant={variant}
+          sx={sx}
         />
       )}
     </>

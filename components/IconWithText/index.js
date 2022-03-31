@@ -6,9 +6,11 @@ export default function IconWithText({
   text,
   helperText,
   backgroundColor = "primary.main",
+  fullHeight,
+  sx
 }) {
   return (
-    <Card sx={{ maxWidth: 120, display: 'inline-block' }}>
+    <Card sx={{ minWidth: 120, maxWidth: 170, display: 'inline-block', height: fullHeight ? '100%' : 'inherit', ...sx }}>
       <CardContent
         sx={{
           display: "flex",

@@ -110,13 +110,13 @@ export default function Sidebar(props) {
             </ListItemIcon>
             <ListItemText primary="News" />
           </ListItem>
-          <ListItem onClick={() => router.push("/breaches/catalogue")} button>
+          <ListItem onClick={() => router.push("/breachCatalogue")} button>
             <ListItemIcon>
               <AutoStoriesTwoToneIcon />
             </ListItemIcon>
             <ListItemText primary="Breache Catalogue" />
           </ListItem>
-          <ListItem onClick={() => router.push("/prospecting/report")} button>
+          <ListItem onClick={() => router.push("/prospectingReport")} button>
             <ListItemIcon>
               <AssessmentTwoToneIcon />
             </ListItemIcon>

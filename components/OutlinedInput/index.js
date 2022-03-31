@@ -1,5 +1,6 @@
 import {
   FormControl,
+  FormHelperText,
   IconButton,
   InputAdornment,
   InputLabel,
@@ -17,6 +18,7 @@ export default function MyOutlinedInput({
   size,
   type,
   value,
+  helperText
 }) {
   return (
     <FormControl size={size} fullWidth={fullWidth}>
@@ -36,6 +38,7 @@ export default function MyOutlinedInput({
         type={type}
         value={value}
       />
+      <FormHelperText id={id}>{helperText}</FormHelperText>
     </FormControl>
   );
 }

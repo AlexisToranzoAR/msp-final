@@ -29,7 +29,7 @@ export default function Dashboard() {
     <>
       <Head title="Dashboard - MSP" />
 
-      <Sidebar title="Dashboard" icon={<SpeedTwoToneIcon sx={{ mr: 1}}/>}>
+      <Sidebar title="Dashboard" icon={<SpeedTwoToneIcon sx={{ mr: 1 }} />}>
         <Grid container spacing={2}>
           <Grid xs={12} xl={6} item>
             <Grid container spacing={2}>
@@ -45,6 +45,7 @@ export default function Dashboard() {
                       backgroundColor={red[500]}
                       text="10"
                       helperText="New Breaches"
+                      sx={{ width: 120 }}
                     />
                   </Grid>
                   <Grid xs={4} md={2} item>
@@ -54,6 +55,7 @@ export default function Dashboard() {
                       }
                       text="MSPDW-05"
                       helperText="Subscription"
+                      sx={{ width: 120 }}
                     />
                   </Grid>
                   <Grid xs={4} md={2} item>
@@ -63,6 +65,7 @@ export default function Dashboard() {
                       }
                       text="1/5"
                       helperText="Domains"
+                      sx={{ width: 120 }}
                     />
                   </Grid>
                   <Grid xs={4} md={2} item>
@@ -74,6 +77,7 @@ export default function Dashboard() {
                       }
                       text="2"
                       helperText="Customers"
+                      sx={{ width: 120 }}
                     />
                   </Grid>
                   <Grid xs={4} md={2} item>
@@ -81,6 +85,7 @@ export default function Dashboard() {
                       icon={<EmailTwoToneIcon sx={{ height: 50, width: 50 }} />}
                       text="2"
                       helperText="Emails"
+                      sx={{ width: 120 }}
                     />
                   </Grid>
                   <Grid xs={4} md={2} item>
@@ -90,6 +95,7 @@ export default function Dashboard() {
                       }
                       text="2"
                       helperText="Prospecting"
+                      sx={{ maxWidth: 120 }}
                     />
                   </Grid>
                 </Grid>
